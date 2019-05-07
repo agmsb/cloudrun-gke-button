@@ -27,7 +27,7 @@ Setup:
 
 There is a little bit of legwork to get Cloud Run going on GKE, so I've packaged the setup into a neat little button below.
 
-[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/agmsb/cloudrun-gke-button.git&cloudshell_git_branch=master&cloudshell_tutorial=README.md)
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/agmsb/cloudrun-gke-button.git&cloudshell_git_branch=master&cloudshell_working_dir=scripts&cloudshell_tutorial=README.md)
 
 ## Under the hood
 
@@ -57,7 +57,6 @@ Execute the bash script below:
 ```
 ./cleanup.sh
 ```
-
 
 ## TODO
 
