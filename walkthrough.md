@@ -1,4 +1,4 @@
-## Under the hood
+## Walkthrough
 
 Execute the bash script below:
 
@@ -8,6 +8,7 @@ Execute the bash script below:
 
 This is what the bash script does:
 
+* Initalizes gcloud [this requires user input for project and account data]
 * Enables appropriate Google Cloud Platform APIs for GKE, Cloud Run, Cloud Build, and Container Registry.
 * Installs `kubectx` and `kubens`
 * Creates GKE Cluster with these add-ons: `HorizontalPodAutoscaling,HttpLoadBalancing,Istio,CloudRun`
@@ -17,5 +18,4 @@ This is what the bash script does:
 
 ## Now what?
 
-Deploy something to both Cloud Run and Cloud Run on GKE! This repo will be updated with an example shortly. 
-
+Deploy something to both Cloud Run and Cloud Run on GKE! This tutorial will be updated with an example shortly. 
