@@ -19,6 +19,9 @@ log() { echo "$1" >&2; }
 
 echo "Now provisioning Cloud Run on GKE"
 
+# initialize gcloud
+gcloud init
+
 # enable APIs
 gcloud services enable \
     container.googleapis.com \
