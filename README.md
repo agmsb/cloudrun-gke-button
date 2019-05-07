@@ -38,6 +38,7 @@ Once you click the button, this repository will be cloned into your Google Cloud
 ```
 
 This is what the bash script does:
+* Enables appropriate Google Cloud Platform APIs for GKE, Cloud Run, Cloud Build, and Container Registry.
 * Installs `kubectx` and `kubens`
 * Creates GKE Cluster with these add-ons: `HorizontalPodAutoscaling,HttpLoadBalancing,Istio,CloudRun`
 * Renames the cluster context to `cloud-run-gke`
