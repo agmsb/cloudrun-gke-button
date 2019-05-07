@@ -16,6 +16,8 @@ You see, Cloud Run is standardized on [Knative](https://knative.dev/docs/) APIs,
 
 As expected, Kubernetes clusters on Google Kubernetes Engine have this capability baked in through a `CloudRun` add-on. Even better, when you create a GKE cluster with the add-on, it is integrated into the Cloud Run interface as a deployment target.
 
+_Note: this repo was directly inspired by [Cloud Run Button](https://github.com/jamesward/cloud-run-button)._
+
 ## Requirements and setup
 
 Requirements:
@@ -27,30 +29,9 @@ Setup:
 
 There is a little bit of legwork to get Cloud Run going on GKE, so I've packaged the setup into a neat little button below (and one little script - but it sounds way less cool to say button AND a script).
 
-[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/agmsb/cloudrun-gke-button.git&cloudshell_git_branch=master&cloudshell_tutorial=README.md)
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/agmsb/cloudrun-gke-button.git&cloudshell_git_branch=master&cloudshell_tutorial=tutorial.md)
 
-## Under the hood
-
-Once you click the button, this repository will be cloned into your Google Cloud Shell environment. Execute the bash script below:
-
-```
-./scripts/provision.sh
-```
-
-This is what the bash script does:
-
-* Enables appropriate Google Cloud Platform APIs for GKE, Cloud Run, Cloud Build, and Container Registry.
-* Installs `kubectx` and `kubens`
-* Creates GKE Cluster with these add-ons: `HorizontalPodAutoscaling,HttpLoadBalancing,Istio,CloudRun`
-* Renames the cluster context to `cloud-run-gke`
-* Patches `config-network` ConfigMap to allow for outbound access from Pod IP range and Service IP range
-* Patches `config-domain` ConfigMap to use `xip.io` for wildcard DNS to provide working domain for deployed services. 
-
-## Now what?
-
-Deploy something to both Cloud Run and Cloud Run on GKE! This repo will be updated with an example shortly. 
-
-_Note: this repo was directly inspired by [Cloud Run Button](https://github.com/jamesward/cloud-run-button)._
+Once you click the button, this repository will be cloned into your Google Cloud Shell environment. 
 
 ## Cleanup
 
